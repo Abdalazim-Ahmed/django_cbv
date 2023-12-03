@@ -1,0 +1,12 @@
+
+{% load static %}
+
+<h1>Blog Page</h1>
+
+{% for blog in blog %}
+    <small>{{blog.created_at}}</small>
+    <p>{{blog.title}}</p>
+    <img src=" {% static 'blog.image.urls'%} " alt="Image not found">
+    <p>{{blog.text}}</p>
+
+{% endfor %}
